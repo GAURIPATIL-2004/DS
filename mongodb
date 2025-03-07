@@ -1,0 +1,15 @@
+// 1. Switch to (or Create) the Database
+use exam
+
+// 2. Create the Collection and Insert 5 Student Records
+db.marks.insertMany([
+    { seat_no: "E101", name: "Amit", class: "10A", marks: 85, grade: "A" },
+    { seat_no: "E102", name: "Riya", class: "10A", marks: 92, grade: "O" },
+    { seat_no: "E103", name: "Rahul", class: "10B", marks: 78, grade: "B" },
+    { seat_no: "E104", name: "Priya", class: "10B", marks: 60, grade: "C" },
+    { seat_no: "E105", name: "Neha", class: "10A", marks: 45, grade: "F" }
+])
+
+
+db.marks.find({ marks: { $gt: 80 } })
+db.marks.find({ marks: { $lt: 50 } })
