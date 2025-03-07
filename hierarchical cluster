@@ -1,0 +1,11 @@
+# Load dataset
+data <- iris[, 1:4]  
+
+# Compute distance matrix
+dist_matrix <- dist(data)  
+
+# Perform hierarchical clustering
+hc <- hclust(dist_matrix)  
+
+# Plot dendrogram
+plot(hc)  
